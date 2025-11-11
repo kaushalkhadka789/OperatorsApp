@@ -6,21 +6,27 @@ namespace OperatorsApp
     {
         static void Main(string[] args)
         {
-            // Create an object of Calculator class
+            // Create an instance (object) of the Calculator class
             Calculator calc = new Calculator();
 
-            // Perform operations
-            Console.WriteLine("Addition: " + calc.Add(10, 5));
-            Console.WriteLine("Subtraction: " + calc.Subtract(10, 5));
-            Console.WriteLine("Multiplication: " + calc.Multiply(10, 5));
-            Console.WriteLine("Division: " + calc.Divide(10, 5));
+            // Declare variables
+            int a = 10, b = 5;
 
-            // Check Odd or Even
-            Console.Write("Enter a number to check Odd or Even: ");
+            // 🧮 Call all Calculator methods
+            Console.WriteLine("---- Calculator Operations ----");
+            Console.WriteLine($"Addition of {a} and {b}: {calc.Add(a, b)}");
+            Console.WriteLine($"Subtraction of {a} and {b}: {calc.Subtract(a, b)}");
+            Console.WriteLine($"Multiplication of {a} and {b}: {calc.Multiply(a, b)}");
+            Console.WriteLine($"Division of {a} and {b}: {calc.Divide(a, b)}");
+
+            // 🔢 Call OddEvenFinder method
+            Console.WriteLine("\n---- Odd or Even Check ----");
+            Console.Write("Enter a number: ");
             int number = Convert.ToInt32(Console.ReadLine());
             calc.OddEvenFinder(number);
 
-            Console.WriteLine("\nPress any key to exit...");
+            Console.WriteLine("\nAll methods executed successfully!");
+            Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }
     }
